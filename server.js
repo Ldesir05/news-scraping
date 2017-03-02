@@ -20,6 +20,7 @@ app.set("view engine", "handlebars");
 
 // Use morgan and body parser with our app
 app.use(logger("dev"));
+
 app.use(bodyParser.urlencoded({
     extended: false
 }));
@@ -28,7 +29,7 @@ app.use(bodyParser.urlencoded({
 app.use(express.static("public"));
 
 // Database configuration with mongoose
-mongoose.connect("mongodb://localhost/news");
+mongoose.connect("mongodb://localhost/news-scrape");
 var db = mongoose.connection;
 
 // Show any mongoose errors
